@@ -21,12 +21,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html
-      suppressHydrationWarning
+
       lang="en"
       data-theme="dark"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body suppressHydrationWarning={true} className="min-h-full flex flex-col">
         <Navbar />
         <main>{children}</main>
         <Footer />
